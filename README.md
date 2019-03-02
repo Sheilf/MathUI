@@ -1,7 +1,1 @@
-Classrooms & Chapters that tracks simple user data
-
-
-
-
-Todo:
-UI to be expanded
+The keyboard/spellbar component to write mathematics and other gamified capacities.
