@@ -1,0 +1,20 @@
+.Keyboard{
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    outline: none;
+    border: 1px solid white;
+}
+
+.Keyboard header{
+    padding: 50px;
+}
+
+.Keyboard #math-symbol-text-container{
+    font-size: 24px;
+}
+
+.Keyboard #math-symbol-text-container p{
+
+    margin: 10px;
+}
