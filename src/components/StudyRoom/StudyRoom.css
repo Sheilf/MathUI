@@ -1,0 +1,17 @@
+.Button{
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+    border-radius: 47%;
+    margin: 5px;
+}
+
+#question-number-container{
+    width: 100%;
+    
+}
+
+#assistant-click-container{
+width: 61.8%;
+box-sizing: border-box; 
+}

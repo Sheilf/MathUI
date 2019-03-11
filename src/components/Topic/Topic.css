@@ -1,0 +1,33 @@
+.Topic{
+    /* border: 1px solid black;
+    margin-top: 10px;
+    text-align: center;
+    margin: 10px; */
+}
+#Topic-link{
+    margin: 10px;
+    text-align: center;
+
+    border: 1px solid black;
+}
+
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+ 
+  #Topic-link{
+    width: 90%;    
+
+      height: 200px;
+
+  }
+}
+
+
+@media screen and (min-width: 800px) {
+ #Topic-link{
+     width: 30%;
+     height: 250px;
+ }
+}

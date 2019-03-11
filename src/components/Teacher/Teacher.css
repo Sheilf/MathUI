@@ -1,0 +1,10 @@
+.TeacherContainer{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.Teacher{
+    border: 1px solid blue; 
+    height: 100%;
+}

@@ -1,0 +1,45 @@
+.AssistantContainer{
+
+border: 1px solid black;
+min-height: 75vh;
+width: 100%;
+
+
+}
+
+.Assistant{
+    width: 100%;
+    justify-content: center;
+    border: 1px solid black;
+    height: 38.2%;
+}
+
+.Assistant .AssistantArm{
+    height: 61.8px;
+    width: 19.1%;
+    margin: 5px;
+    border-radius: 6px;
+    transition: 0.23s all ease-in-out;
+    color: white;
+    text-shadow: 1px 1px #000000;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.Assistant .AssistantArm:hover{
+    transform: scale(1.05);
+
+    
+}
+
+.Assistant .Lectio{
+    background-color: gold;
+}
+
+.Assistant .Tabula{
+    background-color: palegreen;
+}
+
+.Assistant .Exempli{
+    background-color: darkblue;
+}

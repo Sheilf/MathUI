@@ -1,0 +1,67 @@
+.classroom-coverer{
+    text-align: center;
+}
+.Classroom{
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 30px;
+    /* box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); */
+    transition: 0.23s all ease-in-out;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size:95%;
+    -moz-background-size:  95%;
+    -o-background-size:  95%;
+    background-size: 50%;
+
+border: 1px solid black;
+
+}
+.Classroom a{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    
+
+
+
+
+    
+}
+
+.Classroom:hover{
+    transform: scale(1.05);
+    /* box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); */
+  
+}
+.Classroom a img{
+    width: 50%;
+    height: 50%;
+
+}
+
+
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+ 
+  .Classroom{
+    width: 30%;    
+
+      height: 200px;
+
+  }
+}
+
+
+@media screen and (min-width: 800px) {
+    .classroom-container{
+        width: 26%;
+        margin-top: 10px;
+    }
+ .Classroom{
+     width: 100%;
+     height: 150px;
+ }
+}
