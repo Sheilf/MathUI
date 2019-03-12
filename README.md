@@ -2,7 +2,8 @@
 A mathematics learning platform.
 
 # What it is
-Components are built with React & Firestore
+Components are built with React & Firestore<br/>Visit: 
+sheilf.github.io/LearnUI-Project-Proposal
 
 # Todo
 
