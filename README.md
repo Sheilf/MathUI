@@ -25,20 +25,29 @@ Components are built with React & Firestore
   <pre>
 
   import *;
-   let db= firebase.firestore();
-   let users = db.collection('users');
+  
+  //1.Call DB at top
+  
+  let db= firebase.firestore();
+  let users = db.collection('users');
 
-  class GenericComponent extends Component{
+  //2. use class components.
+  
+  class GenericComponent extends Component{ 
       constructor(props){
           super(props)
           this.state={
             clicked: "clicked"
           }
+          
+          //3. bind events in constructor
           this.handleClick = this.handleClick.bind(this);
       }
 
       componentDidMount(){ //class function*/
   
+  
+          //4. use arrow functions/lambdas after class functions are called
           firebase.auth().onStateChanged(user => {
                 this.setState({
                     currUser: user.uid
@@ -48,19 +57,23 @@ Components are built with React & Firestore
       }
 
       componentDidUpdate(){
-          //alert(upward traversal)
+          //alert("upward traversal")
       
       }
 
 
       handleClick(event){ //class function
           
+          //5. Use the event object.
           alert(event.target.textContent)
 
           
       }
       
       render(){
+          //6. className="NameOfClass"
+          //7. See: flexborder.css for flex-combinations
+          //8. Call event={this.handleEvent}
           <section className="GenericComponent flex-combination" onClick={this.handleClick}>
                 Generic Component text content
           </section>
@@ -72,18 +85,6 @@ Components are built with React & Firestore
 
 
 
-1. use class component
-  <pre>
-  class GenericComponent extends Component{
-      constructor(props){
-          super(props)
-          this.state={
-          }
-                    
-      }
-  }
-  </pre>
-2. Use arrow functions inside class functions
 
 
 # Components
