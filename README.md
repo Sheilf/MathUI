@@ -3,7 +3,7 @@ A mathematics learning platform.
 visit: https://mathui.firebaseapp.com
 
 # What it is
-Components are built with React & Firestore<br/>Visit: 
+Components are built with React & Firestore<br/>
 see: https://sheilf.github.io/LearnUI-Project-Proposal
 
 # Todo
