@@ -75,9 +75,9 @@ Components are built with React & Firestore
           //7. See: flexborder.css for flex-combinations
           //8. Call event={this.handleEvent} //
 
-          <section className="GenericComponent flex-combination" onClick={this.handleClick}>
+          <pre><section className="GenericComponent flex-combination" onClick={this.handleClick}>
                 Generic Component text content
-          </section>
+          </section></pre>
       }
 
 
