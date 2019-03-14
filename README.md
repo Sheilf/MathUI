@@ -14,10 +14,16 @@ see: https://sheilf.github.io/LearnUI-Project-Proposal
   <li>Create coin and distribution system(s)</li>
   <li>Design & implement & integrate the Keyboard component**</li>
   <li>Studyroom application navigation and de-bordering</li>
-  <li>Design & implement the Forum / Tabula component</li>
+  <li>Design & implement the Forum / Tabula component <b> COMPLETED 3/13 </b></li>
   <li>Design & implement the Animated Reading / Lectio component**</li>
   <li>Design & implement the QuestionDisplay component**</li>
   <li>Create own videos**</li>
+</ul>
+
+# Work in progress
+<ul>
+  <li>Updating Basic Visual Design</li>
+  <li>Implementing Teacher Portal</li>
 </ul>
 
 
