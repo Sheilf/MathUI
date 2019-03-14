@@ -37,6 +37,7 @@ class Assistant extends Component {
     // alert("ASSISTANT has updated and rendered again.")
   }
   handleAssistant(event){
+    var teacher = document.getElementById("TeacherContainer");
     if(event.target.id==="Lectio"){
       this.setState({
         isLectioActive: true,
@@ -44,6 +45,7 @@ class Assistant extends Component {
         isExempliActve: false
 
       })
+      // teacher.style.backgroundColor="gold"
     }else if(event.target.id==="Tabula"){
       this.setState({
         isLectioActive: false,
@@ -51,7 +53,7 @@ class Assistant extends Component {
         isExempliActve: false
 
       })
-      
+      // teacher.style.backgroundColor="palegreen";
     }else if(event.target.id==="Exempli"){
       this.setState({
         isLectioActive: false,
@@ -59,9 +61,13 @@ class Assistant extends Component {
         isExempliActve: true
 
       })
+      // teacher.style.backgroundColor="darkblue";
     }else{
 
     }
+
+
+    
       
   }
   render() {
@@ -86,7 +92,7 @@ class Assistant extends Component {
           <Exempli />
         </section>
 
-        <section className="TeacherContainer">
+        <section id="TeacherContainer" className="TeacherContainer">
           {this.props.displayState ? teacher : null}
         </section> 
 

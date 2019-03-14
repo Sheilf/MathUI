@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import TabulaFora from '../TabulaFora/TabulaFora'
 import './Teacher.css';
 import '../../styles/flexborder.css';
 import '../../firebase-init';
@@ -38,34 +39,49 @@ class Teacher extends Component {
           exempli: doc.data().videoURL
         })
     })
-  
+
+
   }
 
   componentDidUpdate(){
     // alert("TEACHER has updated and rendered again.")
+    
+    let teacher = document.getElementById('teacher');
+    if(this.props.display==="lectio"){
+      teacher.style.backgroundColor="gold"
+    }else if(this.props.display==="tabula"){
+      teacher.style.backgroundColor="palegreen"
+
+      
+    }else if(this.props.display==="exempli"){
+      teacher.style.backgroundColor="darkblue"
+
+    }
   }
 
   render() {
     let display;
     if(this.props.display==="lectio"){
+      //component LectioVisum
       display=<div>Written text and animations is active for {this.state.lectio}</div>
 
     }else if(this.props.display==="tabula"){
-      display=(<div>
-        Forum display for {this.state.tabula}
-        </div>)
+      //component TabulaFora
+      display= <TabulaFora course={this.props.course} chapter={this.props.chapter} onQuestion={this.props.onQuestion} />
+    
 
     }else if(this.props.display==="exempli"){
-    display=(<div>
+      //component ExempliExplicate
+    display=(
                 <iframe width="560" height="315" src={this.state.exempli} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-      (Video is displayed {this.state.exempli}</div>)
+     )
 
     }else{
 
     }
     return (
-      <section className="Teacher">
+      <section id="teacher" className="Teacher">
         
         {display}
 

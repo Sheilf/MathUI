@@ -7,6 +7,7 @@ import Session from './components/Session/Session';
 import Subject from './components/Subject/Subject';
 import StudyRoom from './components/StudyRoom/StudyRoom';
 import Keyboard from './components/Keyboard/Keyboard';
+import ForumView from './components/ForumView/ForumView';
 import { BrowserRouter, Route} from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 
@@ -18,6 +19,7 @@ ReactDOM.render(
             <Route exact path="/session" component={Session}> </Route>
             <Route exact path="/session/:classroom" component={Subject}> </Route>
             <Route exact path="/session/:classroom/:topic" component={StudyRoom}> </Route>
+            <Route exact path="/session/:classroom/:topic/:question/forum/:id" component={ForumView}></Route>
             <Route exact path="/keyboard" component={Keyboard}></Route>
         </div>
     </BrowserRouter>,

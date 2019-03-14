@@ -1,0 +1,15 @@
+.TabulaFora button{
+    border: 1px solid black;
+    padding: 15px;
+    background-color: turquoise;
+    color: white;
+    font-weight: bolder;
+    margin-top: 10px;
+    transition: 0.15s all ease-in-out;
+}
+
+.TabulaFora:hover button{
+    transform:scale(1.03);
+}
+
+

@@ -7,4 +7,7 @@
 .Teacher{
     border: 1px solid blue; 
     height: 100%;
+    color: white;
+    text-shadow: 1px 1px #000;
+    font-weight: bolder;
 }
