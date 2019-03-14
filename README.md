@@ -22,6 +22,7 @@ see: https://sheilf.github.io/LearnUI-Project-Proposal
 
 # Work in progress
 <ul>
+  <li>Refactoring code and adding comments on basic component functionality</li>
   <li>Updating Basic Visual Design</li>
   <li>Implementing Teacher Portal</li>
 </ul>
