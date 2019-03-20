@@ -100,10 +100,72 @@ see: https://sheilf.github.io/LearnUI-Project-Proposal
 # Components
 <code>
 
-<Index> root
-  import *
- 
-      <App> </App>
+<Index> Root 
+  <App> 
+     <Banner />
+     <Login route to Session />
+     
+     <Session>
+        <Banner />
+        <School>
+          [...<Classrooms route to Subject />]  //classrooms 1..12
+        </School>        
+     </Session>
+     
+     <Subject>
+        <TopicList>
+          <Topic route to StudyRoom />
+        </TopicList>
+      </Subject>
+      
+      
+       <StudyRoom>
+          <QuestionGenerator>
+            [...<Question renders QuestionDisplay/>] //[1..10]
+          </QuestionGenerator>
+          
+          <QuestionDisplay>
+            <Form />
+            <MathKeys />
+          </QuestionDisplay>
+          
+          <Assistant>
+            <NotesAssistant render Teacher/>
+            <DiscussAssistant render Teacher/>
+            <SessionAssistant render Teacher/>
+            
+            <Teacher render Notes : Discuss : Session />
+              <Notes>
+                <Card>
+                  <Sketch renders animation />
+                <Card>
+                <Content/>
+              </Notes>
+              
+              <Discuss>
+                <Post />
+                <Forum>
+                  [...<Threads route to Threads/>] //1..n
+                </Forum>
+              </Discuss>
+              
+              <Session>
+                <Video />  
+              </Session>
+              
+             </Teacher>
+          </Assistant>
+        
+       </StudyRoom>
+       
+       
+       <Thread />
+          <Sub-application with mathkey components />
+       <Thread /> 
+
+    
+      
+  </App>
 
 </Index>
 
