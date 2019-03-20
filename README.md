@@ -99,8 +99,8 @@ see: https://sheilf.github.io/LearnUI-Project-Proposal
 
 # Components
 <code>
-<UI />
-
-</UI>
+<Index> root
+  <Component> </Component>
+</Index>
 
 </code>
