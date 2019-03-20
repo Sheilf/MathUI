@@ -99,8 +99,12 @@ see: https://sheilf.github.io/LearnUI-Project-Proposal
 
 # Components
 <code>
+
 <Index> root
-  <Component> </Component>
+  import *
+  <Components> 
+      <App />
+  </Components>
 </Index>
 
 </code>
