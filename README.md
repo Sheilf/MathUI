@@ -102,9 +102,9 @@ see: https://sheilf.github.io/LearnUI-Project-Proposal
 
 <Index> root
   import *
-  <Components> 
-      <App />
-  </Components>
+ 
+      <App> </App>
+
 </Index>
 
 </code>
