@@ -98,9 +98,9 @@ see: https://sheilf.github.io/LearnUI-Project-Proposal
 
 
 # Components
-<pre>
+<code>
 <UI />
 
 </UI>
 
-</pre>
+</code>
