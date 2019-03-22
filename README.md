@@ -7,24 +7,39 @@ Components are built with React & Firestore<br/>
 see: https://sheilf.github.io/LearnUI-Project-Proposal
 
 # Todo
+Oh god the backlog gets thicker and thicker.
 
 <ul>
-  <li>Navigation visual design</li>
   <li>Initiate teacher domain</li>
+  <li>Implement subscriptions (after filing 501-3c)</li>
   <li>Create coin and distribution system(s)</li>
   <li>Design & implement & integrate the Keyboard component**</li>
-  <li>Studyroom application navigation and de-bordering</li>
-  <li>Design & implement the Forum / Tabula component <b> COMPLETED 3/13 </b></li>
-  <li>Design & implement the Animated Reading / Lectio component**</li>
-  <li>Design & implement the QuestionDisplay component**</li>
+  <li>Design & implement the QuestionDisplay component</li>
   <li>Create own videos**</li>
+  <li>Student Stats page</li>
+  <li>Upgrade Lectio/Notes component with animated and collectable cards for stats page</li>
+
 </ul>
+
+# Tedious Todos
+<ul>
+  <li>Create subject/topic icons</li>
+  <li>Update/generalize a default video for Session/Exempli Assistant</li>
+</ul>
+
+# Completed
+<ul>
+  <li>Design & implement the Forum / Tabula component</li>
+  <li>Design & implement the Animated Reading / Lectio component**</li>
+  <li>Studyroom application navigation and de-bordering</li>
+</ul>
+
 
 # Work in progress
 <ul>
-  <li>Refactoring code and adding comments on basic component functionality</li>
-  <li>Updating Basic Visual Design</li>
-  <li>Implementing Teacher Portal</li>
+  <li>Student account stats/data collection</li>
+  <li>Coin/point system</li>
+  <li>Collectible card system</li>
 </ul>
 
 
