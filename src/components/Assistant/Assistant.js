@@ -92,7 +92,7 @@ class Assistant extends Component {
           <Exempli />
         </section>
 
-        <section id="TeacherContainer" className="TeacherContainer">
+        <section id="TeacherContainer" className="TeacherContainer flex-border-row-column-centered">
           {this.props.displayState ? teacher : null}
         </section> 
 

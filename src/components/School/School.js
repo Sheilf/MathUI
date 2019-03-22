@@ -5,11 +5,10 @@ import Classroom from '../Classroom/Classroom';
 
 
 
-
+//This component is ok
 class School extends Component {
   constructor(props){
     super(props);
-
   }
 
 

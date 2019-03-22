@@ -47,9 +47,10 @@ class Question extends Component {
         "data"
       ).get().then(doc => {
           if(doc.data().visited==true){ 
-            document.getElementById(this.props.questionCount).style.backgroundColor="gold";
+            document.getElementById(this.props.questionCount+"").style.backgroundColor="#FFF700";
+      
             if(doc.data().questionCompleted){
-              document.getElementById(this.props.questionCount).style.backgroundColor="teal";
+              document.getElementById(this.props.questionCount).style.backgroundColor="#00FFFF";
             }     
           }else{
 

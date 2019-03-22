@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './ForumView.css';
 import '../../styles/flexborder.css';
 import '../../firebase-init';
+
+import Navigate from '../Navigate/Navigate';
 import * as firebase from 'firebase';
 
 let db = firebase.firestore();
@@ -48,6 +50,7 @@ class ForumView extends Component {
     return (
       
       <section className="ForumView flex-border-column-centered">
+        <Navigate />
         <h1> {this.state.title} </h1>
         <p>{this.state.content}</p>
       </section>

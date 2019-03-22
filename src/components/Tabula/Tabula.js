@@ -9,7 +9,7 @@ class Tabula extends Component {
   render() {
     return (
       <section id="Tabula" className="Tabula AssistantArm flex-border-column-centered">
-        Tabula
+        Discussion
 
       </section>
     );

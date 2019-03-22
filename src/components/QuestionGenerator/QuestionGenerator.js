@@ -33,7 +33,7 @@ class QuestionGenerator extends Component {
   
 
     return (
-      <section className="QuestionGenerator flex-border-row-centered">
+      <section className="QuestionGenerator flex-border-row">
         {questionItems}
       </section>
     );

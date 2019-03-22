@@ -66,7 +66,9 @@ class Keyboard extends Component {
 
     return (
       <button id="Keyboard_parent" className="Keyboard flex-border-column-centered" autoFocus>
-          Keyboard
+          Smart Keys in development.
+          <br/>
+          Press 'n' to switch keys.
 
           
           <div id="math-symbol-text-container">

@@ -14,23 +14,6 @@ class Topic extends Component {
   }
 
   componentDidMount(){
-    let classroom = this.props.classroom;
-    let topic = this.props.value
-    let onQuestion = [1,2,3,4,5,6,7,8,9,10];
-
-    
-    firebase.auth().onAuthStateChanged(function(user) {
-      if (user) {
-        let currentUser = user.uid;
-        for(let i = 0; i < onQuestion.length; i++){
-          
-        }
-  
-      }else{
-        // No user is signed in.
-      }
-    })
-
   }
   render() {
     return (

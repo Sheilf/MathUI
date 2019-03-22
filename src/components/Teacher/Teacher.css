@@ -11,3 +11,39 @@
     text-shadow: 1px 1px #000;
     font-weight: bolder;
 }
+
+.Teacher iframe{
+    
+    display: flex;
+
+    width: 100%;
+
+}
+
+
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+
+    .Teacher iframe{
+        height: 35vh;
+      
+
+    }
+
+    #teacher{
+        margin-top: 10px;
+    }
+  
+}
+
+
+@media screen and (min-width: 800px) {
+    .Teacher iframe{
+        height: 61.8vh;
+    }
+    #teacher{
+        margin-top: 35px;
+    }
+}

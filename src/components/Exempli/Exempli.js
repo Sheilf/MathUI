@@ -9,7 +9,7 @@ class Exempli extends Component {
   render() {
     return (
       <section id="Exempli" className="Exempli AssistantArm flex-border-column-centered">
-        Exempli
+        Session
       </section>
     );
   }

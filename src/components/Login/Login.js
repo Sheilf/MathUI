@@ -2,7 +2,6 @@
 import React, {Component} from 'react';
 import {Redirect} from 'react-router-dom';
 import './Login.css';
-// import Session from '../Session/Session';
 import '../../firebase-init';
 import firebase from "firebase";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
@@ -10,6 +9,22 @@ import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
 let db = firebase.firestore();
 let users = db.collection("users");
 
+
+/*
+Sign in with popup.
+
+if user exists in User Collection, set first visit document to false
+if the user is new, create add the user to the User Collection and set the first visit to true.
+
+Then call call a rerender with login state.
+If state is logged in, Redirect to /session
+Else display login page at "/"
+
+
+TODO
+Redirect to an user-type page on first login. Users will choose whether they're a teacher or a student.
+
+*/
 class Login extends Component{
 
   constructor(props){
@@ -33,83 +48,47 @@ class Login extends Component{
 
   componentDidMount = () => {
     firebase.auth().onAuthStateChanged(user => {
-   
-      console.log("user", user)
-      // firebase.auth().signOut();
-
       if(user){
         users.doc(user.uid).get().then(doc =>{
             if(doc.data()){
-              // alert("User is already in the database.")
               users.doc(user.uid).set({
                 firstVisit: false
               })
             }else{
-              // alert("Creating user.")
               users.doc(user.uid).set({
                 firstVisit: true
               })
             }
             return doc
-      }).then(doc =>{
-        this.setState({ isSignedIn: !!user })
-      })}else{
-        // alert("No one is logged in");
+        }).then(doc =>{
+          this.setState({ isSignedIn: !!user })
+        })
       }
 
-      // firebase.auth().signOut();
 
     })
   }
 
   render(){
     return(
-    <section className="Login">
-      {this.state.isSignedIn ? (
-          <Redirect to="/session"/>
-        ) : 
+      <section className="Login">
+        {
+          this.state.isSignedIn ? (
+            <Redirect to="/session"/>
+          ) : 
           (
-          <div>
-          <Redirect to="/"/>
-          <StyledFirebaseAuth
-            uiConfig={this.uiConfig}
-            firebaseAuth={firebase.auth()}
-          />
-          </div>
-         )
-      }
-
-    </section>
+            <div>
+     
+              <StyledFirebaseAuth
+                uiConfig={this.uiConfig}
+                firebaseAuth={firebase.auth()}
+              />
+            </div>
+          )
+        }
+      </section>
     )
   }
 }
 
 export default Login;
-
-
-
-
-// import React, { Component } from 'react';
-// import '../../styles/flexborder.css';
-// import './Login.css';
-// import Button from '../Button/Button';
-// import { Link } from 'react-router-dom';
-
-// class Login extends Component {
-
-
-//   render() {
-//     return (
-//       <section id={this.props.id} className="Login flex-border-column-centered">
-        
-//         <Link to="/session">
-//           <Button button="start-session" />
-//         </Link>
-//       </section>
-//     );
-//   }
-// }
-
-
-
-// export default Login;

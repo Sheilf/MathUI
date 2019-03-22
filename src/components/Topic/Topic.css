@@ -7,9 +7,15 @@
 #Topic-link{
     margin: 10px;
     text-align: center;
-
+    border-radius: 15px;
     border: 1px solid black;
+    transition: 0.12s all ease-in-out;
 }
+#Topic-link:hover{
+    transform:scale(1.03);
+}
+
+
 
 
 @media only screen 
@@ -17,7 +23,7 @@ and (min-device-width : 320px)
 and (max-device-width : 480px) {
  
   #Topic-link{
-    width: 90%;    
+    width: 95%;    
 
       height: 200px;
 
@@ -27,7 +33,8 @@ and (max-device-width : 480px) {
 
 @media screen and (min-width: 800px) {
  #Topic-link{
-     width: 30%;
-     height: 250px;
+     width: 30.6%;
+     height: 150px;
+    
  }
 }

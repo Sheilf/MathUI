@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './QuestionDisplay.css';
 import '../../styles/flexborder.css';
 import * as firebase from 'firebase';
+import {Link} from 'react-router-dom';
 let db = firebase.firestore();
 let users = db.collection("users");
 let userData;
@@ -35,7 +36,7 @@ class QuestionDisplay extends Component {
             this.setState({
               rerender: !this.state.rerender,
             })
-            document.getElementById(this.props.onQuestion).style.backgroundColor ="teal";
+            document.getElementById(this.props.onQuestion).style.backgroundColor ="#00FFFF";
 
 
           }
@@ -63,7 +64,7 @@ class QuestionDisplay extends Component {
         this.setState({
             answerCorrect: "Answer has bee completed."
         })
-        document.getElementById(this.props.onQuestion).style.backgroundColor ="teal";
+        document.getElementById(this.props.onQuestion).style.backgroundColor ="#226666";
       }else{
         users.doc(this.state.currUser).collection(this.props.course).doc(this.props.chapter).collection(this.props.onQuestion+"").doc("data").update({
          attempts: this.state.previousAttempts+1
@@ -84,18 +85,16 @@ class QuestionDisplay extends Component {
 
           On Question {this.props.onQuestion}<br />
 
-          Course: {this.props.course} <br/>
-          Chapter: {this.props.chapter}
 
-          <br/>
+                    Answer: <input id="answer-field" type="text" />
 
-          Answer: <input id="answer-field" type="text" />
+          <div id="qd-buttons">
           <button onClick={this.handleAttempt}> Submit</button>
 
-          <br/>
-          <br/>
+          
+          <button><Link to="/keyboard" className="flex-border-column-centered"><img src="https://res.cloudinary.com/eduprojectsil/image/upload/v1552970075/LogoMakr_9elokG_tf1muc.png"/><span>MathKeys</span></Link></button>
           {/* {this.state.answerCorrect} */}
-
+          </div>
       </section>
     );
   }

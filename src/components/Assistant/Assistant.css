@@ -1,8 +1,11 @@
 .AssistantContainer{
 
-border: 1px solid black;
 min-height: 75vh;
 width: 100%;
+
+/* background-color: white; */
+
+
 
 
 }
@@ -10,16 +13,20 @@ width: 100%;
 .Assistant{
     width: 100%;
     justify-content: center;
-    border: 1px solid black;
-    height: 38.2%;
+  
+    position: fixed;
+
+    background-color: white;
+    width: 61.8%;
+    padding-top: 10px;
 }
 
 .Assistant .AssistantArm{
     height: 61.8px;
-    width: 19.1%;
+
     margin: 5px;
     border-radius: 6px;
-    transition: 0.23s all ease-in-out;
+    transition: 0.11s all ease-in-out;
     color: white;
     text-shadow: 1px 1px #000000;
     font-weight: bolder;
@@ -27,7 +34,9 @@ width: 100%;
 }
 
 .Assistant .AssistantArm:hover{
-    transform: scale(1.05);
+    /* transform: scale(1.05); */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
 
     
 }
@@ -43,3 +52,46 @@ width: 100%;
 .Assistant .Exempli{
     background-color: darkblue;
 }
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+    /* #assistant-click-container{
+        width: 61.8%;
+        box-sizing: border-box; 
+        margin-top: 19.1px;
+        
+            
+        }
+   */.Assistant{
+    top: 240px;
+   width: 100%; 
+   }
+
+   .Assistant .AssistantArm{
+    width:30%;
+    
+}
+
+
+}
+
+
+@media screen and (min-width: 800px) {
+    /* #assistant-click-container{
+        width: 61.8%;
+        box-sizing: border-box; 
+        margin-top: 19.1px;
+        
+            
+        }
+} */
+.Assistant{
+    top: 97px;
+    left: 38.2; 
+   }
+.Assistant .AssistantArm{
+    width: 19.1%;
+}
+  
+} 

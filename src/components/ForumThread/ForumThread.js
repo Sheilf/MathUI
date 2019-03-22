@@ -29,7 +29,7 @@ class ForumThread extends Component {
   render() {
     return (
       <section className="ForumThread flex-border-column-centered">
-        <Link to={`/session/${this.props.course}/${this.props.chapter}/${this.props.onQuestion}/forum/${this.props.id}`} target="_blank" className="flex-border-row-centered"> {this.props.title} </Link>
+        <Link to={`/session/${this.props.course}/${this.props.chapter}/${this.props.onQuestion}/forum/${this.props.id}`} className="flex-border-row-centered"> {this.props.title} </Link>
 
       </section>
     );

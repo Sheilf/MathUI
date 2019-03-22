@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TabulaFora from '../TabulaFora/TabulaFora'
 import './Teacher.css';
+import Notes from '../Notes/Notes';
 import '../../styles/flexborder.css';
 import '../../firebase-init';
 import * as firebase from 'firebase';
@@ -63,7 +64,8 @@ class Teacher extends Component {
     let display;
     if(this.props.display==="lectio"){
       //component LectioVisum
-      display=<div>Written text and animations is active for {this.state.lectio}</div>
+
+      display= <Notes />
 
     }else if(this.props.display==="tabula"){
       //component TabulaFora
@@ -73,7 +75,7 @@ class Teacher extends Component {
     }else if(this.props.display==="exempli"){
       //component ExempliExplicate
     display=(
-                <iframe width="560" height="315" src={this.state.exempli} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src={this.state.exempli} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
      )
 
@@ -81,7 +83,7 @@ class Teacher extends Component {
 
     }
     return (
-      <section id="teacher" className="Teacher">
+      <section id="teacher" className="Teacher flex-border-column-centered">
         
         {display}
 

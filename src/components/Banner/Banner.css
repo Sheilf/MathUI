@@ -1,3 +1,8 @@
 .Banner{
-    height: 39.2vh;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.Banner{
+    /* background-color: rgba(0,0,0,0.5); */
 }
