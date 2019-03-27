@@ -186,6 +186,7 @@ Oh god the backlog gets thicker and thicker.
 
 </code>
 
+# Component Description
 
 # The Point System
 <p>
@@ -220,3 +221,11 @@ The point system is based off similar practices done by Khan Academy with master
 
 
 <h2>Awards</h2>
+
+<p>
+ Awards wil be based on a combination of efforts made by the student. A simple example would be receiving an Award for completing the Fundamentals course. Perhaps there are questions that students rate positively but are answered at 60% success. Students that answer these questions may receive particular rewards for doing that
+</p>
+
+<p>
+ The combinations are endless. The Awards will allow users to customize their math-bot profiles. There should be enough Awards that will allow users to feel proud of their achievements.
+</p>
