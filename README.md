@@ -185,3 +185,38 @@ Oh god the backlog gets thicker and thicker.
 </Index>
 
 </code>
+
+
+# The Point System
+<p>
+The point system is based off similar practices done by Khan Academy with mastery and energy points. Students can earn points by interacting with the question and awards by completing certain objectives.
+</p>
+
+<h2> Question interactions </h2>
+<b>6 Points per question</b>
+<p>
+  Visiting a question earns 1 point. 
+</p>
+
+<p>
+  Attempting a question will earn one point. Answering correct on the first try will count the attempt and award a point for it.
+</p>
+
+<p>
+ Answering a question correct will earn a point.
+</p>
+
+<p>
+  Collecting a card from Notes will earn a point.
+</p>
+
+<p>
+  Receiving a helpful post or helpful reply will earn a point in Discussion.
+</p>
+
+<p>
+  Watching the video in its entirety will earn a point from Session.
+</p>
+
+
+<h2>Awards</h2>
