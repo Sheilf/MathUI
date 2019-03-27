@@ -190,7 +190,7 @@ Oh god the backlog gets thicker and thicker.
 
 # The Point System
 <p>
-The point system is based off similar practices done by Khan Academy with mastery and energy points. Students can earn points by interacting with the question and awards by completing certain objectives.
+The point system is based off similar practices done by Khan Academy with mastery and energy points. Students can earn points by interacting with the question and awards by completing certain objectives. The points awarded is what is returned from the student's subscription to the program.
 </p>
 
 <h2> Question interactions </h2>
