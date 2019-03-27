@@ -190,7 +190,7 @@ Oh god the backlog gets thicker and thicker.
 
 # The Point System
 <p>
-The point system is based off similar practices done by Khan Academy with mastery and energy points. Students can earn points by interacting with the question and awards by completing certain objectives. The points awarded is what is returned from the student's subscription to the program.
+The point system is based off similar practices done by Khan Academy with mastery and energy points. Students can earn points by interacting with the question and awards by completing certain objectives. The points awarded is what is returned from the student's subscription to the program. A student essentially needs to only receive 3 of the 6 points to complete a question. This is still a 100% complete. This is entirely up the the student and their choice of participation. Simply put: more effort translates to more points. More points means more of the subscription donated.
 </p>
 
 <h2> Question interactions </h2>
