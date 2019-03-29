@@ -71,11 +71,11 @@ see: https://sheilf.github.io/LearnUI-Project-Proposal
           //6. className="NameOfClass"
           //7. See: flexborder.css for flex-combinations
           //8. Call event={this.handleEvent} //
-          <addr>
+          `
           <div className="GenericComponent flex-combination" onClick={this.handleClick}>
                 Generic Component text content
           </div>
-          </addr>
+          `
       }
 
 
