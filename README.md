@@ -74,7 +74,7 @@ see: https://sheilf.github.io/LearnUI-Project-Proposal
           
           < div className="GenericComponent flex-combination" onClick={this.handleClick}>
                 Generic Component text content
-          </ div>
+          < /div>
           `
       }
 
