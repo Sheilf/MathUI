@@ -223,7 +223,7 @@ The point system is based off similar practices done by Khan Academy with master
 <h2>Awards</h2>
 
 <p>
- Awards wil be based on a combination of efforts made by the student. A simple example would be receiving an Award for completing the Fundamentals course. Perhaps there are questions that students rate positively but are answered at 60% success. Students that answer these questions may receive particular rewards for doing that
+ Awards wil be based on a combination of efforts made by the student. A simple example would be receiving an Award for completing the Fundamentals course. Perhaps there are questions that students rate positively but are answered at 60% success. Students that answer these questions may receive particular rewards for doing that. Other users may gravitate to using a forum more often than other users who prefer video direction. There are rewards to be reaped for doing what you prefer.
 </p>
 
 <p>
