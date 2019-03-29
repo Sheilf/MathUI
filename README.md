@@ -161,19 +161,73 @@ see: https://sheilf.github.io/LearnUI-Project-Proposal
 </code>
 
 # Component Descriptions
-  <h4></h4>
+  <h4>App</h4>
+  <div>Contains:</div> 
+  <ol>
+    <li>Banner</li>
+    <li>Login</li>
+  </ol>
+  
+  <div>Props: </div>
+  <ul>
+    <li></li>
+  </ul>
+  <p>App is a stateless presentation component that displays the landing page. Users are instructed to create their accounts.</p>
+  
+  <h4>Banner</h4>
+  <div>Contains:</div> 
+  <ol>
+    <li>none</li>
+  </ol>
+    <div>Props: </div>
+  <ul>
+    <li></li>
+  </ul>
+  <p>Banner is a stateless presentation component that displays instructions for users to navigate the site</p>
+  
+  <h4>Login</h4>
+  <div>Contains:</div>
+  <ol>
+    <li></li>
+  </ol>
+    <div>Props: </div>
+  <ul>
+    <li></li>
+  </ul>
   <p></p>
   
   <h4></h4>
+  <div></div>
+  <ol>
+    <li></li>
+  </ol>
+    <div>Props: </div>
+  <ul>
+    <li></li>
+  </ul>
   <p></p>
   
   <h4></h4>
+  <div></div>
+  <ol>
+    <li></li>
+  </ol>
+    <div>Props: </div>
+  <ul>
+    <li></li>
+  </ul>
   <p></p>
   
   <h4></h4>
-  <p></p>
+  <div></div>
+  <ol>
+    <li></li>
   
-  <h4></h4>
+  </ol>
+    <div>Props: </div>
+  <ul>
+    <li></li>
+  </ul>
   <p></p>
   
 # Database Design
