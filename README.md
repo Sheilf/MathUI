@@ -9,7 +9,7 @@ see: https://sheilf.github.io/LearnUI-Project-Proposal
 # Development Queue
 
 <ol>
-  <li>Component Descriptions</li>
+  <li>Add state and events to Component Descriptions.</li>
   <li>Rework database design</li>
   <li>Implement point system</li>
 </ol>
@@ -170,7 +170,7 @@ see: https://sheilf.github.io/LearnUI-Project-Proposal
   
   <div>Props: </div>
   <ul>
-    <li></li>
+    <li>None</li>
   </ul>
   <p>App is a stateless presentation component that displays the landing page. Users are instructed to create their accounts.</p>
   
@@ -179,56 +179,232 @@ see: https://sheilf.github.io/LearnUI-Project-Proposal
   <ol>
     <li>none</li>
   </ol>
-    <div>Props: </div>
+    <div>Props:</div>
   <ul>
-    <li></li>
+    <li>heading</li>
+    <li>subeading</li>
   </ul>
   <p>Banner is a stateless presentation component that displays instructions for users to navigate the site</p>
   
   <h4>Login</h4>
   <div>Contains:</div>
   <ol>
-    <li></li>
+    <li>Redirect to Session</li>
   </ol>
     <div>Props: </div>
   <ul>
-    <li></li>
+    <li>none</li>
   </ul>
-  <p></p>
+  <p>Login component returns 3 options to register/login in using Google, Facebook, and Email</p>
   
-  <h4></h4>
-  <div></div>
+  <h4>Session</h4>
+  <div>Contains:</div>
+  <ol>
+    <li>Navigate</li>
+    <li>Banner</li>
+    <li>School</li>
+
+</ol>
+    <div>Props: </div>
+  <ul>
+    <li>None</li>
+  </ul>
+  <p>The session component is initiated after a user logs in. It renders the components necessary to select a course from our School component. It initiates the user's database on first login.</p>
+  
+  <h4>Navigate</h4>
+  <div>Contains:</div>
+  <ol>
+    <li>Link route to Stats</li>
+  </ol>
+    <div>Props: </div>
+  <ul>
+    <li>from</li>
+  </ul>
+  <p>Navigate component grants users three options: previous page,  my stats page, and signout. The from prop will decide the color of the navigation icons (UI)</p>
+  
+  <h4>School</h4>
+  <div>Contains</div>
+  <ol>
+    <li>Classroom x12</li>
+  
+  </ol>
+    <div>Props:</div>
+  <ul>
+    <li>none</li>
+  </ul>
+  <p>School component holds a set of Classroom components</p>
+  
+  <h4>Classroom</h4>
+  <div>Contains:</div>
+  <ol>
+  <li>Link route to Subject</li>
+
+  </ol>
+  
+  <div>Props: </div>
+  <ul>
+    <li>classroom</li>
+    <li>name</li>
+    <li>imgSrc</li>
+  </ul>
+  <p>Classroom is a component that renders a link to its respective chapters. It's a presentational component containing a name and icon.</p>
+  
+  
+    
+  <h4>Subject</h4>
+  <div>Contains:</div>
+  <ol>
+    <li>Navigate</li>
+    <li>TopicList</li>
+  </ol>
+  
+  <div>Props: </div>
+  <ul>
+   <li>Routes from /session/:classroom, uses this.props.match.params.classroom</li>
+  
+  </ul>
+  <p>Subject contains a list of topics from the respective course.</p>
+  
+  <h4>TopicList</h4>
+  <div>Contains</div>
+  <ol>
+    <li>Topic</li>
+
+  </ol>
+  
+  <div>Props: </div>
+  <ul>
+   <li>classroom</li>
+   <li>topics[]</li>
+  
+  </ul>
+  <p>TopicList generates a list of topics</p>
+  
+    <h4>Topic</h4>
+  <div>contains:</div>
+  <ol>
+    <li>Link route to respective Studyroom</li>
+
+  </ol>
+  
+  <div>Props: </div>
+  <ul>
+   <li>none</li>
+  
+  </ul>
+  <p>Topic is a component that renders an heading and image and sends you to the chapter's respective studyroom</p>
+  
+  <h4>StudyRoom</h4>
+  <div>Contains</div>
+  <ol>
+    <li>Navigate</li>
+    <li>QuestionGenerator</li>
+    <li>QuestionDisplay</li>
+    <li>Assistant</li>
+  
+  </ol>
+  
+  <div>Props:  </div>
+  <ul>
+   <li>match.params.classroom</li>
+   <li>match.params.topic</li>
+   
+  </ul>
+  <p>StudyRoom is the parent component to the application. It renders a list of 10 questions, a question display, and an assistant and allows users to navigate between questions, trace and store performance/mastery actions to a database, answer questions, and use different assistant functions to learn more about the question.</p>
+  
+      <h4></h4>
+  <div>Contains</div>
   <ol>
     <li></li>
+
   </ol>
-    <div>Props: </div>
+  
+  <div>Props: </div>
   <ul>
-    <li></li>
+   <li></li>
+  
   </ul>
   <p></p>
-  
-  <h4></h4>
-  <div></div>
+      <h4></h4>
+  <div>Contains</div>
   <ol>
     <li></li>
+
   </ol>
-    <div>Props: </div>
+  
+  <div>Props: </div>
   <ul>
-    <li></li>
+   <li></li>
+  
   </ul>
   <p></p>
-  
-  <h4></h4>
-  <div></div>
+      <h4></h4>
+  <div>Contains</div>
   <ol>
     <li></li>
-  
+
   </ol>
-    <div>Props: </div>
+  
+  <div>Props: </div>
   <ul>
-    <li></li>
+   <li></li>
+  
   </ul>
   <p></p>
+      <h4></h4>
+  <div>Contains</div>
+  <ol>
+    <li></li>
+
+  </ol>
+  
+  <div>Props: </div>
+  <ul>
+   <li></li>
+  
+  </ul>
+  <p></p>
+      <h4></h4>
+  <div>Contains</div>
+  <ol>
+    <li></li>
+
+  </ol>
+  
+  <div>Props: </div>
+  <ul>
+   <li></li>
+  
+  </ul>
+  <p></p>
+      <h4></h4>
+  <div>Contains</div>
+  <ol>
+    <li></li>
+
+  </ol>
+  
+  <div>Props: </div>
+  <ul>
+   <li></li>
+  
+  </ul>
+  <p></p>
+  --
+    <h4></h4>
+  <div>Contains</div>
+  <ol>
+    <li></li>
+
+  </ol>
+  
+  <div>Props: </div>
+  <ul>
+   <li></li>
+  
+  </ul>
+  <p></p>
+  
   
 # Database Design
   
