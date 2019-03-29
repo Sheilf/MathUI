@@ -6,49 +6,22 @@ visit: https://mathui.firebaseapp.com
 Components are built with React & Firestore<br/>
 see: https://sheilf.github.io/LearnUI-Project-Proposal
 
-# Todo
-Oh god the backlog gets thicker and thicker.
+# Development Queue
 
-<ul>
-  <li>Initiate teacher domain</li>
-  <li>Implement subscriptions (after filing 501-3c)</li>
-  <li>Create coin and distribution system(s)</li>
-  <li>Design & implement & integrate the Keyboard component**</li>
-  <li>Design & implement the QuestionDisplay component</li>
-  <li>Create own videos**</li>
-  <li>Student Stats page</li>
-  <li>Upgrade Lectio/Notes component with animated and collectable cards for stats page</li>
-
-</ul>
-
-# Tedious Todos
-<ul>
-  <li>Create subject/topic icons</li>
-  <li>Update/generalize a default video for Session/Exempli Assistant</li>
-</ul>
-
-# Completed
-<ul>
-  <li>Design & implement the Forum / Tabula component</li>
-  <li>Design & implement the Animated Reading / Lectio component**</li>
-  <li>Studyroom application navigation and de-bordering</li>
-</ul>
-
-
-# Work in progress
-<ul>
-  <li>Student account stats/data collection</li>
-  <li>Coin/point system</li>
-  <li>Collectible card system</li>
-</ul>
+<ol>
+  <li>Component Descriptions</li>
+  <li>Rework database design</li>
+  <li>Implement point system</li>
+</ol>
 
 
 
 # Naming Conventions (development)
 
   <pre>
-
+  <Index> Naming
   import *;
+  
   
   //1.Call DB at top
   
@@ -99,13 +72,13 @@ Oh god the backlog gets thicker and thicker.
           //7. See: flexborder.css for flex-combinations
           //8. Call event={this.handleEvent} //
 
-          <\section className="GenericComponent flex-combination" onClick={this.handleClick}>
+          <section className="GenericComponent flex-combination" onClick={this.handleClick}>
                 Generic Component text content
-          <\/section>
+          </section>
       }
 
 
-  
+  </Index>
   </pre>
 
 
@@ -186,8 +159,24 @@ Oh god the backlog gets thicker and thicker.
 
 </code>
 
-# Component Description
-
+# Component Descriptions
+  <h4></h4>
+  <p></p>
+  
+  <h4></h4>
+  <p></p>
+  
+  <h4></h4>
+  <p></p>
+  
+  <h4></h4>
+  <p></p>
+  
+  <h4></h4>
+  <p></p>
+  
+# Database Design
+  
 # The Point System
 <p>
 The point system is based off similar practices done by Khan Academy with mastery and energy points. Students can earn points by interacting with the question and awards by completing certain objectives. The points awarded is what is returned from the student's subscription to the program. A student essentially needs to only receive 3 of the 6 points to complete a question. This is still a 100% complete. This is entirely up the the student and their choice of participation. Simply put: more effort translates to more points. More points means more of the subscription donated.
