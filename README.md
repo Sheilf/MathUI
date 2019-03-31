@@ -1,28 +1,28 @@
 # Table of Contents
 
 <a href="#MathUI">1.0 MathUI </a>
-<br/><br/>
+
 
 <a href="#What_it_is">2.0 What it is </a>
-<br/><br/>
+<br/>
 
 <a href="#Development_Queue">3.0 Development Queue </a>
-<br/><br/>
+<br/>
 
 <a href="#Naming_Conventions">4.0 Development Queue </a>
-<br/><br/>
+<br/>
 
 <a href="#Components">5.0 Components </a>
-<br/><br/>
+<br/>
 
 <a href="#Database_Design">6.0 Database Design </a>
-<br/><br/>
+<br/>
 
 <a href="#The_Point_System">7.0 The Point System </a>
-<br/><br/>
+<br/>
 
 <a href="#Component_Descriptions">8.0 The Component Descriptions </a>
-<br/><br/>
+<br/>
 
 <h1 id="MathUI">1.0 MathUI </h1>
 A mathematics learning platform.
