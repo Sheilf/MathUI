@@ -1,4 +1,9 @@
-# MathUI
+# Table of Contents
+
+<a href="#MathUI">1.0 MathUI </a>
+<br/><br/>
+
+<h1 id="MathUI"> MathUI </h1>
 A mathematics learning platform.
 visit: https://mathui.firebaseapp.com
 
