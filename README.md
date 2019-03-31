@@ -1,6 +1,6 @@
 # Table of Contents
 
-<b href="#MathUI">1.0 MathUI </b>
+<a href="#MathUI" style="color: black">1.0 MathUI </a>
 <br/><br/>
 
 <h1 id="MathUI"> MathUI </h1>
