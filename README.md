@@ -163,6 +163,8 @@ see: https://sheilf.github.io/LearnUI-Project-Proposal
 
   
 # Database Design
+
+<img src="https://res.cloudinary.com/eduprojectsil/image/upload/v1554007225/Untitled-1_y1udww.png"/>
   
 # The Point System
 <p>
