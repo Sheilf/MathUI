@@ -1,27 +1,47 @@
 # Table of Contents
 
-<a href="#MathUI" style="color: black;">1.0 MathUI </a>
+<a href="#MathUI">1.0 MathUI </a>
 <br/><br/>
 
-<h1 id="MathUI"> MathUI </h1>
+<a href="#What_it_is">2.0 What it is </a>
+<br/><br/>
+
+<a href="#Development_Queue">3.0 Development Queue </a>
+<br/><br/>
+
+<a href="#Naming_Conventions">4.0 Development Queue </a>
+<br/><br/>
+
+<a href="#Components">5.0 Components </a>
+<br/><br/>
+
+<a href="#Database_Design">6.0 Database Design </a>
+<br/><br/>
+
+<a href="#The_Point_System">7.0 The Point System </a>
+<br/><br/>
+
+<a href="#Component_Descriptions">8.0 The Component Descriptions </a>
+<br/><br/>
+
+<h1 id="MathUI">1.0 MathUI </h1>
 A mathematics learning platform.
 visit: https://mathui.firebaseapp.com
 
-# What it is
+<h1 id="What_it_is">2.0 What it is </h1>
 Components are built with React & Firestore<br/>
 see: https://sheilf.github.io/LearnUI-Project-Proposal
 
-# Development Queue
+<h1 id="Development_Queue">3.0 Development Queue </h1>
 
 <ol>
   <li>Add state and events to Component Descriptions.</li>
-  <li>Rework database design</li>
   <li>Implement point system</li>
 </ol>
 
 
+<h1 id="Naming_Conventions">4.0 Naming Conventions </h1>
 
-# Naming Conventions (development)
 
   <pre>
   <Index> Naming
@@ -91,7 +111,7 @@ see: https://sheilf.github.io/LearnUI-Project-Proposal
 
 
 
-# Components
+<h1 id="Components">5.0 Components</h1>
 <code>
 
 <Index> Root 
@@ -167,11 +187,12 @@ see: https://sheilf.github.io/LearnUI-Project-Proposal
 
 
   
-# Database Design
+<h1 id="Database_Design">6.0 Database Design</h1>
+
 
 <img src="https://res.cloudinary.com/eduprojectsil/image/upload/v1554007225/Untitled-1_y1udww.png"/>
   
-# The Point System
+<h1 id="The_Point_System">7.0 The Point System</h1>
 <p>
 The point system is based off similar practices done by Khan Academy with mastery and energy points. Students can earn points by interacting with the question and awards by completing certain objectives. The points awarded is what is returned from the student's subscription to the program. A student essentially needs to only receive 3 of the 6 points to complete a question. This is still a 100% complete. This is entirely up the the student and their choice of participation. Simply put: more effort translates to more points. More points means more of the subscription donated.
 </p>
@@ -215,7 +236,8 @@ The point system is based off similar practices done by Khan Academy with master
 
 
 
-# Component Descriptions
+<h1 id="component_Descriptions">8.0 Component Descriptions</h1>
+
   <h4>App</h4>
   <div>Contains:</div> 
   <ol>
