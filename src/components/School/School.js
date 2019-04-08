@@ -15,7 +15,7 @@ class School extends Component {
   render() {
     return (
       <section className="School flex-border-row-wrap">
-          <Classroom classroom="Fundamentals" name="Fundamentals" imgSrc="https://res.cloudinary.com/eduprojectsil/image/upload/v1552285667/Asset_1_k2q5pt.png"/>
+          <Classroom classroom="Fundamentals" name="Fundamentals" imgSrc="https://res.cloudinary.com/eduprojectsil/image/upload/v1553474431/LogoMakr_2t95D0_fhwa9l.png"/>
           <Classroom classroom="Arithmetic"  name="Arithmetic" imgSrc="https://res.cloudinary.com/eduprojectsil/image/upload/v1551654799/LogoMakr_60EO38_hpewbj.png"/>
           <Classroom classroom="Prealgebra" name="Pre-algebra" imgSrc="https://res.cloudinary.com/eduprojectsil/image/upload/e_bgremoval/v1551386475/PRE-ALGEBRA_jyyce4.png"/>
 

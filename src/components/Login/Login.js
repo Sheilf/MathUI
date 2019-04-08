@@ -51,7 +51,7 @@ class Login extends Component{
       if(user){
         users.doc(user.uid).get().then(doc =>{
             if(doc.data()){
-              users.doc(user.uid).set({
+              users.doc(user.uid).update({
                 firstVisit: false
               })
             }else{

@@ -16,14 +16,16 @@ class Classroom extends Component {
   }
   render() {
     return (
-      <div className="classroom-container">
-        <Link to={"/session/"+this.props.classroom} className="">  
+      <Link to={"/session/"+this.props.classroom} className="classroom-container">  
+      
+        
           <h3 className="">{this.props.name}</h3>
           <section id={this.props.classroom} className="Classroom">
 
           </section>
-        </Link>
-      </div>
+     
+     
+      </Link>
     );
   }
 }

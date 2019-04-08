@@ -68,12 +68,11 @@ class StudyRoom extends Component {
         // Color the question node for visited(gold) or answer(teal)
         // (users)/user/(course)/chapter/(question#)/
         //  .get().then()
-        //THIS IS REPEATED. SET A VARIABLE FOR THIS CHAIN
-      users.doc(this.state.user).collection(this.props.match.params.classroom).doc(this.props.match.params.topic).collection(event.target.id).doc("data").get().then(doc=>{
+       users.doc(this.state.user).collection(this.props.match.params.classroom).doc(this.props.match.params.topic).collection(event.target.id).doc("data").get().then(doc=>{
         if(doc.data().questionCompleted == false){
-          item.style.backgroundColor = "#FFF700";
+          item.style.backgroundColor = "#40E0CF";
         }else{
-          item.style.backgroundColor ="#00FFFF";
+          item.style.backgroundColor ="#FFFA49";
   
         }
       })

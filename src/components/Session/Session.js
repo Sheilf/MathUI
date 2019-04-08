@@ -8,6 +8,7 @@ import Navigate from '../Navigate/Navigate';
 
 import '../../firebase-init';
 import firebase from "firebase";
+
 let db = firebase.firestore();
 let users = db.collection("users");
 
@@ -28,16 +29,38 @@ class Session extends Component {
   constructor(props){
     super(props);
     this.state={
+      mounted: false
     }
+
+    this.loadPage=this.loadPage.bind(this);
+  }
+
+  loadPage(event){
+    this.setState({
+      mounted: true
+    })
+    document.getElementById("sesh").style.visibility="visible";
+    document.getElementById("sesh").style.opacity="1";
+
   }
 
   componentDidMount(){
- 
+
+
+
     firebase.auth().onAuthStateChanged(user => {  
       users.doc(user.uid).get().then(doc =>{
         if(doc.data().firstVisit == true){
-          users.doc(user.uid).update({
-            firstVisit: false
+          alert("Setting database")
+          users.doc(user.uid).set({
+            firstVisit: false,
+            user_statistics:{
+            attempts: 0,
+            questions_completed: 0,
+            questions_visited: 0,
+            points_earned: 0,
+            donations: 0
+            }
           })
           let classrooms = ["Fundamentals", "Arithmetic", "Prealgebra", "AlgebraI", "Geometry", "AlgebraII", "Trigonometry", "Precalculus", "Statistics", "DifferentialCalculus", "IntegralCalculus", "MultivariableCalculus"];
           
@@ -86,26 +109,75 @@ class Session extends Component {
             topicListCopy.forEach(j =>{
               let questionCount = [1,2,3,4,5,6,7,8,9,10];
               questionCount.forEach(k =>{
+                // let video_default = db.collection(i).doc(j).collection(k+"").doc("questionData");
+                // video_default.update({
+                //   videoURL: "https://www.youtube.com/embed/YkNmxJh_5WE"
+                // })
+                console.log(i,j,k);
                 let dataItem = users.doc(user.uid).collection(i).doc(j).collection(k+"").doc("data");
+                
                 dataItem.set({
-                    visited: false,
-                    attempts: 0,
-                    questionCompleted: false
-                }) //END .SET
+                  visited: false,
+                  attempts: 0,
+                  questionCompleted: false
+              }) //END .SET
+                // let notecard = db.collection("Notecards").doc(i).collection(j).doc(k+"");
+                // notecard.set({
+                //   card: "created"
+                // })
+                // let video = db.collection("Videos").doc(i).collection(j).doc(k+"");
+                // video.set({
+                //   video: "created"
+                // })
+              //   let questions = db.collection("Questions").doc(i).collection(j).doc(k+"");
+              //   questions.set({
+              //     questions: "created"
+
+              //   })
+
+              //  let keyboards = db.collection("Keyboards").doc(i).collection(j).doc(k+"");
+              //  keyboards.set({
+              //    keyboard: "created"
+              //  })
+
+
+
 
               })//END FOR EACH IN K
             })//END FOR EACH IN J
           })//END FOR EACH IN I
         }else{
+          // let words = " hello world!  ";
+          // console.log(words);
+
+          // let word_split = words.split(" ");
+          // let reverse_word_split = [];
+          // let reversed_words = "";
+          // console.log("split: "+ word_split);
+          // for(let i = word_split.length - 1; i > -1; i--){
+          //     if(word_split[i] === ""){
+          //         console.log("space detected")
+          //     }else{
+          //      reverse_word_split.push(word_split[i]);  
+      
+          //     }
+      
+              
+          // }
+          
+          //  console.log(reversed_words = reverse_word_split.join(" "))
         }
       })//end user.doc().get()
     })//end onAuthStateChanged()
+
+
   }//end componentDidMount()
   
 
   render() {
+
     return (
-      <section className="Session flex-border-column-centered">
+      <section id="sesh" className="Session flex-border-column-centered" onLoad={this.loadPage}>
         <Navigate />
 
         <Banner banner="session-banner" heading="" subheading="Choose a classroom." />

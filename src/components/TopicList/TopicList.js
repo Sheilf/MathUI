@@ -21,7 +21,7 @@ class TopicList extends Component {
     
     
     return (
-       <div className="TopicList flex-border-row-wrap">
+       <div className="TopicList flex-border-row-centered-wrap">
         {topicItems} </div>
     );
   }

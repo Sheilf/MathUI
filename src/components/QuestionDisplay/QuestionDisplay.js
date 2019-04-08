@@ -54,22 +54,56 @@ class QuestionDisplay extends Component {
 
   handleAttempt(event){
 
+    //if already answered: Do nothing
+    //else: run attempt and add to it.
+  
+    
     let ans = document.getElementById("answer-field").value;
-    // alert(ans);
+    
+    users.doc(this.state.currUser).collection(this.props.course).doc(this.props.chapter).collection(this.props.onQuestion+"").doc("data").get().then(doc=>{
+      // alert(doc.data());
+      if(doc.data().questionCompleted){
+        //do nothing
+        alert("question has been completed.");
+      }else{
+        alert("Question has NOT een completed.")
+       
+         db.collection(this.props.course).doc(this.props.chapter).collection(this.props.onQuestion+"").doc("questionData").get().then(snap =>{
+            if(snap.data().answer+""===ans){
+              alert("CORRECT");
+              users.doc(this.state.currUser).collection(this.props.course).doc(this.props.chapter).collection(this.props.onQuestion+"").doc("data").update({
+                questionCompleted: true
+              })
+            }else{
+              alert("wrong");
+            }
+
+            users.doc(this.state.currUser).get().then(dataset=>{
+                users.doc(this.state.currUser).update({
+                  "user_statistics.attempts": dataset.data().user_statistics.attempts+1
+                  })
+            })
+            
+            
+         })
+      }
+    })
+
+
     db.collection(this.props.course).doc(this.props.chapter).collection(this.props.onQuestion+"").doc("questionData").get().then(doc=>{
+      if(doc.data())
       if((doc.data().answer+"") === ans){
+        alert('correct');
         users.doc(this.state.currUser).collection(this.props.course).doc(this.props.chapter).collection(this.props.onQuestion+"").doc("data").update({
           questionCompleted: true
         })
         this.setState({
             answerCorrect: "Answer has bee completed."
         })
-        document.getElementById(this.props.onQuestion).style.backgroundColor ="#226666";
+        document.getElementById(this.props.onQuestion).style.backgroundColor = "#5CF145";  
       }else{
-        users.doc(this.state.currUser).collection(this.props.course).doc(this.props.chapter).collection(this.props.onQuestion+"").doc("data").update({
-         attempts: this.state.previousAttempts+1
-       })
-       this.setState({answerAttempts: this.state.answerAttempts+1})
+          //warn user answer was not completed.
+          alert('wrong.')
       }
     })
   }
@@ -86,13 +120,13 @@ class QuestionDisplay extends Component {
           On Question {this.props.onQuestion}<br />
 
 
-                    Answer: <input id="answer-field" type="text" />
+          Answer: <input id="answer-field" type="text" />
 
           <div id="qd-buttons">
           <button onClick={this.handleAttempt}> Submit</button>
 
           
-          <button><Link to="/keyboard" className="flex-border-column-centered"><img src="https://res.cloudinary.com/eduprojectsil/image/upload/v1552970075/LogoMakr_9elokG_tf1muc.png"/><span>MathKeys</span></Link></button>
+          <button id="math-keyboard-button"><Link to="/keyboard" className="flex-border-column-centered"><img src="https://res.cloudinary.com/eduprojectsil/image/upload/v1552970075/LogoMakr_9elokG_tf1muc.png"/><span>MathKeys</span></Link></button>
           {/* {this.state.answerCorrect} */}
           </div>
       </section>

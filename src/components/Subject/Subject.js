@@ -12,8 +12,11 @@ class Subject extends Component {
     super(props);
     this.state={
       topicList: [],
-          classroom: ""
+          classroom: "",
+          mounted: false
     }
+
+    this.loadPage=this.loadPage.bind(this);
   }
 
   componentDidMount(){
@@ -82,11 +85,20 @@ class Subject extends Component {
     
   }
 
+  loadPage(event){
+    this.setState({
+      mounted: true
+    })
+    document.getElementById('subject').style.visibility = 'visible';
+
+    document.getElementById('subject').style.opacity = 1;
+
+  }
 
   render() {   
     return (
-      <section className="Subject flex-border-column-centered">
-              <Navigate />
+      <section id="subject" className="Subject flex-border-column-centered" onLoad={this.loadPage}>
+        <Navigate from="subject" />
 
         <h1>{this.state.classroom}</h1>
         <TopicList classroom={this.props.match.params.classroom} topics={this.state.topicList}/>

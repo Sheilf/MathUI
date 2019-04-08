@@ -3,7 +3,19 @@
 .classroom-coverer{
     text-align: center;
 }
+.classroom-container{
+    border-radius: 15px;
+    border: 1px solid black;
+    padding: 35px;
+    background-color: rgb(184,231,254,0.75);
+    transition: 0.23s all ease-in-out;
+  
+
+
+}
 .Classroom{
+
+ 
     margin-top: 10px;
     text-align: center;
     border-radius: 30px;
@@ -16,15 +28,12 @@
     -o-background-size:  95%;
     background-size: 50%;
 
-border: 1px solid black;
+
 
 
 }
-.Classroom a{
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-    
+.classroom-container h3{
+ 
 
 
 
@@ -32,9 +41,12 @@ border: 1px solid black;
     
 }
 
-.Classroom:hover{
+.classroom-container:hover{
     transform: scale(1.05);
-    /* box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); */
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    background-color: rgba(255,255,255, 1);
+  
+
   
 }
 .Classroom a img{
@@ -49,7 +61,7 @@ border: 1px solid black;
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 480px) {
- 
+
     .classroom-container{
         width: 75%;
     }
@@ -62,8 +74,9 @@ and (max-device-width : 480px) {
 
 
 @media screen and (min-width: 800px) {
+
     .classroom-container{
-        width: 26%;
+        width: 15%;
         margin-top: 10px;
     }
  .Classroom{

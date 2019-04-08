@@ -49,7 +49,7 @@ class Teacher extends Component {
     
     let teacher = document.getElementById('teacher');
     if(this.props.display==="lectio"){
-      teacher.style.backgroundColor="gold"
+      teacher.style.backgroundColor="#FF9649"
     }else if(this.props.display==="tabula"){
       teacher.style.backgroundColor="palegreen"
 
@@ -65,7 +65,7 @@ class Teacher extends Component {
     if(this.props.display==="lectio"){
       //component LectioVisum
 
-      display= <Notes />
+      display= <Notes course={this.props.course} chapter={this.props.chapter} onQuestion={this.props.onQuestion} />
 
     }else if(this.props.display==="tabula"){
       //component TabulaFora

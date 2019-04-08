@@ -16,29 +16,75 @@ class Stats extends Component {
 
     super(props);
     this.state={
-      username: ""
+      username: "",
+      displayStats:""
     }
   }
   componentDidMount(){
-    firebase.auth().onAuthStateChanged(user =>{
-        this.setState({
-          username: user.displayName
+    let classrooms = ["Fundamentals", "Arithmetic", "Prealgebra", "AlgebraI", "Geometry", "AlgebraII", "Trigonometry", "Precalculus", "Statistics", "DifferentialCalculus", "IntegralCalculus", "MultivariableCalculus"];
 
-        })
+    let test;
+    firebase.auth().onAuthStateChanged(user =>{
+      /*
+        usersDB getStats()
+      */
+      users.doc(user.uid).get().then(doc =>{
+        let item = doc.data().user_statistics;
+        test = Object.keys(item).map(key =>  <div className="stats-subcontainer">{key.charAt(0).toUpperCase()+key.replace(/_/g, ' ').slice(1)+": "+ item[key]}/n</div>)
+      //   for(let i in item){
+      //     console.log(item[keys[i]]); 
+      //   }
+      // })
+      this.setState({
+        username: user.displayName,
+        displayStats: test
+      })
     })
-  }
+ 
+
+
+ 
+})
+}
   render() {
     return (
       <section className="Stats flex-border-column-centered">
         <Navigate />
-        <header> <h3>Account Stats</h3> 
-
+        <header> 
+          <h3>Account Stats</h3> 
           <h2>{this.state.username}</h2>
         </header>
 
-        <section id="coin-bag">
-          Coin Bag
+       <h1>Awards</h1>  
+        <section id="Awards-container" className="flex-border-row-wrap">
+         
+          <div className="award-badges">
+            Award 1
+
+          </div>
+          <div className="award-badges">
+            Award 2
+          </div>
+          <div className="award-badges">
+            Award 3
+          </div>
+          <div className="award-badges">
+            Award 3
+          </div>
+          <div className="award-badges">
+            Award 3
+          </div>
         </section>
+        <h1>Points</h1>  
+        <section id="Points-container" className="flex-border-column-centered">
+          <b>0/n points </b>               
+        </section>
+        <h1>Statistics</h1>
+        <section id="user-statistics-container" className="flex-border-column-centered">
+         
+          {this.state.displayStats}
+        </section>
+        
       </section>
     );
   }
