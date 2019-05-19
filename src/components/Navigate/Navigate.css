@@ -50,3 +50,11 @@
 .Navigate #menu li a{
     color: white;
 }
+
+#edu-menu{
+background-color: skyblue;
+padding: 5px;
+padding-bottom: 10px;
+border-bottom-left-radius: 15px;
+border-bottom-right-radius: 15px;
+}

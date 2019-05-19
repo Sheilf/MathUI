@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import './Notes.css';
 import '../../styles/flexborder.css';
 import NoteCard from '../NoteCard/NoteCard';
+import '../../firebase-init';
+import * as firebase from 'firebase';
+
+let db = firebase.firestore();
+let auth = firebase.auth();
+
 class Notes extends Component {
     constructor(props){
         super(props);
@@ -15,6 +21,19 @@ class Notes extends Component {
     }
 
 
+    componentDidMount(){
+            // auth.currentUser.uid;
+        alert(auth.currentUser.uid);
+        let currUser  = auth.currentUser.uid;
+        let NOTES = db.collection(this.props.course).doc(this.props.chapter).collection(this.props.onQuestion+"").doc("questionData").collection("Notes").doc("Notecards");
+
+        NOTES.set({
+            notecards: {
+
+            },
+            notecard_count: 0 
+        })
+    }
 
 
     openCard(event){

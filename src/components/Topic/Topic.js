@@ -4,8 +4,6 @@ import './Topic.css';
 import {Link} from 'react-router-dom';
 import '../../firebase-init';
 import * as firebase from 'firebase';
-let db= firebase.firestore();
-let users = db.collection('users');
 
 class Topic extends Component {
   constructor(props){
@@ -14,7 +12,11 @@ class Topic extends Component {
   }
 
   componentDidMount(){
+
+
   }
+
+  
   render() {
     return (
         <Link id="Topic-link" to={"/session/"+this.props.classroom+"/"+this.props.routemap}>

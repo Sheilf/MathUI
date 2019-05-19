@@ -10,20 +10,7 @@ import '../../firebase-init';
 import firebase from "firebase";
 
 let db = firebase.firestore();
-let users = db.collection("users");
-
-
-//Signout component can be generalized for multiple pages.
-//The triple for loop is likely better written as a map. 
-
-//Proces:
-/*
-    User logged in.
-    If user is visiting for the first time, populate the User database with classrooms and topics to
-    have its data tracked
-    Otherwise do nothing.
-
-*/
+let USERS = db.collection("users");
 
 class Session extends Component {
   constructor(props){
@@ -49,10 +36,9 @@ class Session extends Component {
 
 
     firebase.auth().onAuthStateChanged(user => {  
-      users.doc(user.uid).get().then(doc =>{
+      USERS.doc(user.uid).get().then(doc =>{
         if(doc.data().firstVisit == true){
-          alert("Setting database")
-          users.doc(user.uid).set({
+          USERS.doc(user.uid).set({
             firstVisit: false,
             user_statistics:{
             attempts: 0,
@@ -104,23 +90,26 @@ class Session extends Component {
                 topicListCopy = ["CalculusFoundations", "Thinkingbeyond2D", "DerivativesinMultidimensions", "IntegratinginMultidimensions", "Convergence&Divergence", "Green&StokeTheorems"]
                 break;
               default:
-                alert( "There was an error initiating your database" );
+                alert("There was an error initiating your database");
             }
             topicListCopy.forEach(j =>{
               let questionCount = [1,2,3,4,5,6,7,8,9,10];
               questionCount.forEach(k =>{
+                
                 // let video_default = db.collection(i).doc(j).collection(k+"").doc("questionData");
                 // video_default.update({
                 //   videoURL: "https://www.youtube.com/embed/YkNmxJh_5WE"
                 // })
-                console.log(i,j,k);
-                let dataItem = users.doc(user.uid).collection(i).doc(j).collection(k+"").doc("data");
+
+                let QUESTION_MAP = USERS.doc(user.uid).collection(i).doc(j).collection(k+"").doc("data");
                 
-                dataItem.set({
+                QUESTION_MAP.set({
                   visited: false,
                   attempts: 0,
                   questionCompleted: false
-              }) //END .SET
+                }) 
+              
+                //END .SET
                 // let notecard = db.collection("Notecards").doc(i).collection(j).doc(k+"");
                 // notecard.set({
                 //   card: "created"

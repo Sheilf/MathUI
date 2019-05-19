@@ -43,7 +43,7 @@ class Keyboard extends Component {
       let currentSpell = this.state.currentSpell;
       
 
-      if(event.keyCode==78){
+      if(event.keyCode==68){
         if(currentSpell == spellbookCount-1){
           // alert("RESETTING")
           this.setState({currentSpell: 0});
@@ -68,7 +68,7 @@ class Keyboard extends Component {
       <button id="Keyboard_parent" className="Keyboard flex-border-column-centered" autoFocus>
           Smart Keys in development.
           <br/>
-          Press 'n' to switch keys.
+          Press 'd' to switch keys.
 
           
           <div id="math-symbol-text-container">

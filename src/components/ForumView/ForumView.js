@@ -7,6 +7,7 @@ import Navigate from '../Navigate/Navigate';
 import * as firebase from 'firebase';
 
 let db = firebase.firestore();
+let FORUM_POST_ID;
 let auth = firebase.auth();
 
 class ForumView extends Component {
@@ -29,17 +30,23 @@ class ForumView extends Component {
     let chapter= this.props.match.params.topic;
     let question = this.props.match.params.question;
     let id = this.props.match.params.id;
-
-
-
-
-    db.collection(classroom).doc(chapter).collection(question).doc("questionData").collection("Forum Posts").doc(id).get().then(doc =>{
+    FORUM_POST_ID = db.collection(classroom).doc(chapter).collection(question).doc("questionData").collection("Forum Posts").doc(id);
+    FORUM_POST_ID.get().then(doc =>{
       this.setState({
         currThread: id,
         title: doc.data().title,
-        content: doc.data().op
+        content: doc.data().op,
+        posted_by_user: doc.data().posted_by_user
+
+
       })
     })
+
+    // firebase.auth().onAuthStateChanged(user =>{
+
+
+    // })
+
 
 
 
@@ -53,6 +60,8 @@ class ForumView extends Component {
         <Navigate />
         <h1> {this.state.title} </h1>
         <p>{this.state.content}</p>
+        <p>threadID: {this.state.currThread}</p>
+        <p>Posted by user: {this.state.posted_by_user}</p>
       </section>
     );
   }

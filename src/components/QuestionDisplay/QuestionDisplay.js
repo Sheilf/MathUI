@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './QuestionDisplay.css';
 import '../../styles/flexborder.css';
+import Keyboard from '../Keyboard/Keyboard';
 import * as firebase from 'firebase';
 import {Link} from 'react-router-dom';
 let db = firebase.firestore();
@@ -21,6 +22,7 @@ class QuestionDisplay extends Component {
 
     }
     this.handleAttempt=this.handleAttempt.bind(this);
+
   }
 
   componentDidMount(){
@@ -117,7 +119,7 @@ class QuestionDisplay extends Component {
 
       <section className="QuestionDisplay flex-border-column">
 
-          On Question {this.props.onQuestion}<br />
+          <h1>Q{this.props.onQuestion}</h1>
 
 
           Answer: <input id="answer-field" type="text" />
@@ -129,6 +131,8 @@ class QuestionDisplay extends Component {
           <button id="math-keyboard-button"><Link to="/keyboard" className="flex-border-column-centered"><img src="https://res.cloudinary.com/eduprojectsil/image/upload/v1552970075/LogoMakr_9elokG_tf1muc.png"/><span>MathKeys</span></Link></button>
           {/* {this.state.answerCorrect} */}
           </div>
+
+          {/* <Keyboard /> */}
       </section>
     );
   }

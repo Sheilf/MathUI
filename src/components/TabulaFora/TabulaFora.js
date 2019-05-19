@@ -22,7 +22,8 @@ class TabulaFora extends Component {
     this.state={
       creatingPost: false,
       generatePost: 0,
-      posts: []
+      posts: [],
+      currUser: ""
     }
 
     this.createPost = this.createPost.bind(this);
@@ -31,6 +32,10 @@ class TabulaFora extends Component {
   componentDidMount(){
     // alert("button is clicked.")
     // alert("POSTING  UPDATED THE PARENT.")
+    let mount_user = ""
+    firebase.auth().onAuthStateChanged(user =>{
+        mount_user = user.uid
+    })
     let posts = []
     db.collection(this.props.course).doc(this.props.chapter).collection(this.props.onQuestion+"").doc("questionData").collection("Forum Posts").onSnapshot(snapshot =>{
       let changes = snapshot.docChanges();
@@ -43,7 +48,7 @@ class TabulaFora extends Component {
          posts.push(
            {
              title: change.doc.data().title,
-             id: change.doc.id
+             id: change.doc.id,
           
            }
         )
@@ -52,7 +57,8 @@ class TabulaFora extends Component {
       })
 
       this.setState({
-        posts: posts
+        posts: posts,
+        currUser: mount_user
       })
    
     })
@@ -70,16 +76,18 @@ class TabulaFora extends Component {
     let title = document.getElementById("title").value;
     let op = document.getElementById("OriginalPost").value;
 
+
     db.collection(this.props.course).doc(this.props.chapter).collection(this.props.onQuestion+"").doc("questionData").collection("Forum Posts").add({
       title: title,
-      op: op
+      op: op,
+      posted_by_user: this.state.currUser
     })
 
     this.setState({
       generatePost: this.state.generatePost+1
     })
 
-    alert(this.state.generatePost)
+    // alert(this.state.generatePost)
     
   }
 

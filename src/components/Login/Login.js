@@ -7,24 +7,8 @@ import firebase from "firebase";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
 
 let db = firebase.firestore();
-let users = db.collection("users");
+let USERS;
 
-
-/*
-Sign in with popup.
-
-if user exists in User Collection, set first visit document to false
-if the user is new, create add the user to the User Collection and set the first visit to true.
-
-Then call call a rerender with login state.
-If state is logged in, Redirect to /session
-Else display login page at "/"
-
-
-TODO
-Redirect to an user-type page on first login. Users will choose whether they're a teacher or a student.
-
-*/
 class Login extends Component{
 
   constructor(props){
@@ -47,15 +31,16 @@ class Login extends Component{
   }
 
   componentDidMount = () => {
+    USERS = db.collection("users");
     firebase.auth().onAuthStateChanged(user => {
       if(user){
-        users.doc(user.uid).get().then(doc =>{
+        USERS.doc(user.uid).get().then(doc =>{
             if(doc.data()){
-              users.doc(user.uid).update({
+              USERS.doc(user.uid).update({
                 firstVisit: false
               })
             }else{
-              users.doc(user.uid).set({
+              USERS.doc(user.uid).set({
                 firstVisit: true
               })
             }

@@ -34,13 +34,14 @@ class Navigate extends Component {
       }
     render() {
         let little_bot; 
+        little_bot = <img id="edu-menu" src="https://res.cloudinary.com/eduprojectsil/image/upload/v1553473588/LogoMakr_8mOTJR_gqzc6e.png"/>
+        // little_bot = <img id="edu-menu" src="https://res.cloudinary.com/eduprojectsil/image/upload/v1553209818/LogoMakr_2xlYF8_pqm2tc.png" />
+        // if(this.props.from){
+          
+        // }else{
+          
 
-        if(this.props.from){
-            little_bot = <img id="edu-menu" src="https://res.cloudinary.com/eduprojectsil/image/upload/v1553473588/LogoMakr_8mOTJR_gqzc6e.png"/>
-        }else{
-            little_bot = <img id="edu-menu" src="https://res.cloudinary.com/eduprojectsil/image/upload/v1553209818/LogoMakr_2xlYF8_pqm2tc.png" />
-
-        }
+        // }
 
         return (
             <nav className="Navigate flex-border-row">
