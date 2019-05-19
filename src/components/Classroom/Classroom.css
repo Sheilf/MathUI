@@ -53,6 +53,11 @@
 
   
 }
+
+.classroom-container:visited{
+    color: white;
+}
+
 .Classroom a img{
     width: 50%;
     height: 50%;
