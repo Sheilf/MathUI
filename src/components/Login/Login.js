@@ -31,30 +31,37 @@ class Login extends Component{
   }
 
   componentDidMount = () => {
+    console.log("LOGIN MOUNTED")
     USERS = db.collection("users");
     firebase.auth().onAuthStateChanged(user => {
       if(user){
-        USERS.doc(user.uid).get().then(doc =>{
-            if(doc.data()){
-              USERS.doc(user.uid).update({
-                firstVisit: false
-              })
-            }else{
-              USERS.doc(user.uid).set({
-                firstVisit: true
-              })
-            }
-            return doc
-        }).then(doc =>{
+        
           this.setState({ isSignedIn: !!user })
-        })
       }
-
-
     })
   }
 
+  componentWillUnmount(){
+    console.log("UNMOUNTING LOGIN...")
+    firebase.auth().onAuthStateChanged(user=>{
+      USERS.doc(user.uid).get().then(doc =>{
+        if(doc.data()){
+          USERS.doc(user.uid).update({
+            firstVisit: false
+          })
+        }else{
+          USERS.doc(user.uid).set({
+            firstVisit: true
+          })
+        }
+        
+      })
+    })
+
+  }
+
   render(){
+
     return(
       <section className="Login">
         {

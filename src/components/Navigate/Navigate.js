@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Navigate.css';
 import '../../styles/flexborder.css';
-import {withRouter, Link} from 'react-router-dom';
+import {withRouter, Link, Redirect} from 'react-router-dom';
 import '../../firebase-init';
 import firebase from "firebase";
 
@@ -24,14 +24,9 @@ class Navigate extends Component {
     }
 
     signOut(){
-        firebase.auth().onAuthStateChanged(function(){
-          firebase.auth().signOut();
-          window.location = "/";
-        })
-        this.setState({
-          signedOut: true
-        })
-      }
+        firebase.auth().signOut();
+        this.setState({signedOut: true})
+    }
     render() {
         let little_bot; 
         little_bot = <img id="edu-menu" src="https://res.cloudinary.com/eduprojectsil/image/upload/v1553473588/LogoMakr_8mOTJR_gqzc6e.png"/>
@@ -42,7 +37,11 @@ class Navigate extends Component {
           
 
         // }
-
+        if(this.state.signedOut){
+            return(
+                <Redirect to="/" />
+            )
+        }
         return (
             <nav className="Navigate flex-border-row">
                 <div id ="go-back-button" onClick={this.props.history.goBack} id="go-back-button"> <i className="fas fa-arrow-left"></i></div>
