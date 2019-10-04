@@ -1,0 +1,50 @@
+.School{
+  
+
+    min-height: 100vh;
+    background: url('https://res.cloudinary.com/eduprojectsil/image/upload/v1533687594/skyimg_ykozcc.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    background-color: #42ade2;
+    width: 100%;
+
+}
+
+
+
+.School .Navigate{
+    /* background-color: rgba(0,0,0,0.5); */
+    background-color: #42ade2;
+}
+
+.School #class-link-container{
+    width: 75%;
+}
+
+
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+ .School{width: 100%;
+ }
+
+ .School #class-link-container{
+    width: 100%;
+}
+
+
+}
+
+
+@media screen and (min-width: 800px) {
+    .School{width: 100%;
+    }
+
+    .School #class-link-container{
+        width: 75%;
+    }
+    
+    
+}

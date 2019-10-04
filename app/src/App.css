@@ -1,0 +1,28 @@
+.App{
+  height: 100vh;
+
+}
+
+.App #welcome-bot{
+  width: 200px;
+  height: 200px;
+}
+
+/* .App button{
+  width: 100px;
+  height: 100px;
+}
+#portal-container button{
+  margin: 15px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 44%;
+  transition: 0.14s all ease-in-out;
+  outline: none;
+}
+
+#portal-container button:hover{
+  background-color: black;
+  color:white;
+  transform: scale(1.03);
+} */
