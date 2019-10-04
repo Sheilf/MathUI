@@ -1,0 +1,28 @@
+#session-banner{
+    height: 9.05vh;
+    color: white;
+    font-weight: bolder;
+}
+
+.Session{
+    min-height: 100vh;
+
+    background: url('https://res.cloudinary.com/eduprojectsil/image/upload/v1533687594/skyimg_ykozcc.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+   
+}
+.Session .Navigate{
+    background-color: transparent;
+    color: white;
+
+    
+}
+
+#sesh{
+    transition: 0.5s all ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+}
+
