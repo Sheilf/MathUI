@@ -28,7 +28,6 @@ class Session extends Component{
   chooseSchool(event){
     if(event.target.className !== 'schooltype'){}
     else{
-      alert("called")
       this.setState({
         school_selected: event.target.id
       })

@@ -43,10 +43,12 @@ export const compsciClassrooms = [
     {display_name: "Discrete Math", classroom: "Discrete-Math", imgSrc: "https://res.cloudinary.com/eduprojectsil/image/upload/v1568091779/LogoMakr_1vcpgk_bz4kiw.png"},
     {display_name: "Data Structures", classroom: "Data-Structures", imgSrc: "https://res.cloudinary.com/eduprojectsil/image/upload/v1568091778/LogoMakr_96rBA9_hcvtrc.png"},
     {display_name: "Algorithms", classroom: "Algorithms", imgSrc: "https://res.cloudinary.com/eduprojectsil/image/upload/v1568091779/LogoMakr_2NExZf_lllswq.png"},
-    {display_name: "HTML5/CSS3", classroom: "Front-End", imgSrc: "https://res.cloudinary.com/eduprojectsil/image/upload/v1568091778/LogoMakr_1l5coe_obm9ev.png"},
+    {display_name: "Web Design", classroom: "Web-Design", imgSrc: "https://res.cloudinary.com/eduprojectsil/image/upload/v1568091778/LogoMakr_1l5coe_obm9ev.png"},
     {display_name: "Javascript", classroom: "Javascript", imgSrc: "https://res.cloudinary.com/eduprojectsil/image/upload/v1568091778/LogoMakr_1l5coe_obm9ev.png"},
-
+    {display_name: "Architecture Patterns", classroom: "Architecture-Patterns",imgSrc:"https://res.cloudinary.com/eduprojectsil/image/upload/v1568092221/LogoMakr_838GX4_b6uwge.png"},
+    {display_name: "Software Engineering", classroom: "Software-Engineering", imgSrc:"https://res.cloudinary.com/eduprojectsil/image/upload/v1568092220/LogoMakr_1uRYs5_rcohsu.png"},
     
 
-
   ];
+
+

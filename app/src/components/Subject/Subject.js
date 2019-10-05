@@ -14,6 +14,7 @@ class Subject extends Component {
     this.state={
       topicList: [],
       classroom: this.props.match.params.classroom,
+      school: this.props.match.params.school,
       mounted: false
     }
 
@@ -21,21 +22,23 @@ class Subject extends Component {
   }
 
   componentDidMount(){
+    console.log("NEW SUBJECT LIST IS MOUNTING ! ! !  ! ! ! ! ! ! ")    
     if(this.props.match.params.school === 'mathUI'){
       this.setState({
         topicList: mathSubjects.get(this.props.match.params.classroom)
       })
-    }else if(this.props.match.school === 'compsciUI') {
+    }else if(this.props.match.params.school === 'compsciUI') {
       this.setState({
         topicList: compsciSubjects.get(this.props.match.params.classroom)
       })
+
+      console.log(compsciSubjects.get(this.props.match.params.classroom))
 
     }else{
       this.setState({
         topicList: defaultSubjects.get(this.props.match.params.classroom)
       })
     }
-
 
     
   }
@@ -51,6 +54,7 @@ class Subject extends Component {
   }
 
   render() {   
+    console.log("CURRENT SCHOOL: ", this.state.school)
     console.log("TOPIC LIST: ", this.state.topicList)
     return (
       <section id="subject" className="Subject flex-border-column-centered" onLoad={this.loadPage}>

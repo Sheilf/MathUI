@@ -42,9 +42,9 @@ export const compsciSubjects = new Map([
     ['Data-Structures',  ["Strings", "Arrays", "Stacks", "Queues",  "Linked Lists", "Maps", "Trees", "Heaps", "Graphs"]],
 
     ['Algorithms', ["Fundamentals", "Recursion", "Divide and Conquer", "Dynamic Programming", "Greedy Approach", "Backtracking", "Searching", "Sorting"]],
-    ['Architecture Patterns', ["Singletons", "Observers", "Decorators", "Strategy", "Adapter", "Factory"]],
-    ['Software Engineering', ["Fundamentals", "Documentation", "Communication", "Software Development Lifecycle"]],
-    ['Web Design', ["The DOM", "Styling", "Advance Styling"]],
+    ['Architecture-Patterns', ["Singletons", "Observers", "Decorators", "Strategy", "Adapter", "Factory"]],
+    ['Software-Engineering', ["Fundamentals", "Documentation", "Communication", "Software Development Lifecycle"]],
+    ['Web-Design', ["The DOM", "Styling", "Advance Styling"]],
     ['JavaScript',  ["Fundamentals", "ES6", "Promises", "Node", "React", "noSQL", "APIs"]]
 
     ]

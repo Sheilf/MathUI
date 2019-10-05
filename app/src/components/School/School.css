@@ -2,11 +2,11 @@
   
 
     min-height: 100vh;
-    background: url('https://res.cloudinary.com/eduprojectsil/image/upload/v1533687594/skyimg_ykozcc.png');
+    background: url('https://res.cloudinary.com/eduprojectsil/image/upload/e_brightness_hsb/v1570232859/new-back_pwibij_yznrzm.png');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-attachment: fixed;
-    background-color: #42ade2;
+    background-color: #4189ff;
     width: 100%;
 
 }
@@ -15,7 +15,7 @@
 
 .School .Navigate{
     /* background-color: rgba(0,0,0,0.5); */
-    background-color: #42ade2;
+    background-color: transparent;
 }
 
 .School #class-link-container{

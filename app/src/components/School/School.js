@@ -27,7 +27,6 @@ class School extends Component {
   }
   componentDidMount(){
     //this.props.match.params
-    alert("School: ", this.state.school)
 
     if(this.state.school === "compsciUI"){
       this.setState({
