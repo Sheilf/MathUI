@@ -1,4 +1,6 @@
-10/4/2018 - Pending Documentation overhaul
+10/4/2019 - Pending Documentation overhaul<br/>
+10/5/2019 - LearnUI will now extend to include computer science and economics. MathUI is now an archived iteration. <br/>
+10/5/2019 - There will be a database, front end, and directory rework rolled out
 
 # Table of Contents
 
