@@ -1,3 +1,9 @@
+12/14/2021 - This is now a project built in Roblox Cloud Studio.
+
+https://developer.roblox.com/en-us/articles/premium-payouts
+
+
+
 10/4/2019 - Pending Documentation overhaul<br/>
 10/5/2019 - LearnUI will now extend to include computer science and economics. MathUI is now an archived iteration. <br/>
 10/5/2019 - There will be a database, front end, and directory rework rolled out with properly written code (see Bumpp project).
